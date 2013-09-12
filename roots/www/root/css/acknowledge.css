@@ -1,0 +1,24 @@
+/* Copyright (c) Venzio 2013 All Rights Reserved */
+
+#thanks,
+#sorry {
+  width: 260px;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #aac;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+  margin: 150px auto 0;
+  text-align: center;
+}
+
+#thanks h2,
+#sorry h2 {
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+#sorry a {
+  color: #3af;
+  text-decoration: none;
+}

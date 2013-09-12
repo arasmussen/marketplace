@@ -1,0 +1,22 @@
+{
+  "name": "marketplace",
+  "version": "0.0.0",
+  "description": "ERROR: No README.md file found!",
+  "main": "root/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:arasmussen/Marketplace.git"
+  },
+  "keywords": [
+    "webgl",
+    "3d",
+    "assets",
+    "marketplace",
+    "venzio"
+  ],
+  "author": "Andrew Rasmussen",
+  "license": "Closed Source"
+}

@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Venzio</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/css/reset.css" />
+    <link rel="stylesheet" href="/css/global.css" />
+<% cssFiles.forEach(function(file) { %>
+    <link rel="stylesheet" href="/css/<%= file %>.css" />
+<% }); %>
+    <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+    <script type="text/javascript" src="https://checkout.stripe.com/v2/checkout.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script type="text/javascript" src="/analytics.js"></script>
+    <script type="text/javascript" src="/script.js"></script>
+<% if (is_game) { %>
+    <script type="text/javascript" src="/client/lib/glMatrix-0.9.5.min.js"></script>
+    <script type="text/javascript" src="/client/ClientGlobals.js"></script>
+    <script data-main="/app.js" src="/client/lib/require.js"></script>
+<% } %>
+  </head>
+  <body>
+    <div id="header">
+      <div id="topbar">
+        <div id="logo">
+          <a href="/"><img src="/img/headerLogo.png" alt="logo" /></a>
+        </div>
+        <div id="nav">
+            <ul>
+              <li><a <% if (uri == '/demo') { %>class="current" <% } %>href="/demo">demo</a></li>
+              <li><a <% if (uri == '/webgl') { %>class="current" <% } %>href="/webgl">webgl</a></li>
+              <li><a <% if (uri == '/features') { %>class="current" <% } %>href="/features">features</a></li>
+            </ul>
+          </div>
+          <div id="subscribe-nav">
+            <a href="/subscribe">Subscribe</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="content">
