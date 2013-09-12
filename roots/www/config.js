@@ -1,6 +1,8 @@
 // Copyright (c) Venzio 2013 All Rights Reserved
 
 define([
+    'roots/www/endpoint/Models',
+    'roots/www/endpoint/Anims',
     'roots/www/endpoint/Payment',
     'roots/www/endpoint/PlayerLogin',
     'roots/www/endpoint/CreatePlayer',
@@ -8,6 +10,8 @@ define([
     'roots/www/endpoint/DeveloperSubscribe',
     'roots/www/endpoint/FakeSignup',
   ], function(
+    ModelsEndpoint,
+    AnimsEndpoint,
     PaymentEndpoint,
     LoginPlayerEndpoint,
     CreatePlayerEndpoint,
@@ -25,8 +29,8 @@ define([
       // request A loads css files in B
       cssFiles: {
         '/index': ['index'],
-        '/demo': ['demo'],
-        '/jobs': ['jobs'],
+        '/models': ['browse'],
+        '/anims': ['browse'],
         '/thanks': ['acknowledge'],
         '/sorry': ['acknowledge'],
         '/subscribe': ['form'],
@@ -37,13 +41,15 @@ define([
 
       // request A calls js function B
       endpoints: {
+        '/models': ModelsEndpoint,
+        '/anims': AnimsEndpoint,
         '/charge': PaymentEndpoint,
         '/playerLogin': LoginPlayerEndpoint,
         '/createPlayer': CreatePlayerEndpoint,
         '/logout': LogoutEndpoint,
         '/developerSubscribe': DeveloperSubscribeEndpoint,
         '/fakeSignup': FakeSignupEndpoint,
-      }, 
+      },
 
       // sends a 302 redirect from A to B
       redirects: {

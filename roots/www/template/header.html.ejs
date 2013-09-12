@@ -13,11 +13,9 @@
     <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
     <script type="text/javascript" src="/analytics.js"></script>
     <script type="text/javascript" src="/script.js"></script>
-<% if (is_game) { %>
     <script type="text/javascript" src="/client/lib/glMatrix-0.9.5.min.js"></script>
     <script type="text/javascript" src="/client/ClientGlobals.js"></script>
     <script data-main="/app.js" src="/client/lib/require.js"></script>
-<% } %>
   </head>
   <body>
     <div id="header">
@@ -27,13 +25,9 @@
         </div>
         <div id="nav">
             <ul>
-              <li><a <% if (uri == '/demo') { %>class="current" <% } %>href="/demo">demo</a></li>
-              <li><a <% if (uri == '/webgl') { %>class="current" <% } %>href="/webgl">webgl</a></li>
-              <li><a <% if (uri == '/features') { %>class="current" <% } %>href="/features">features</a></li>
+              <li><a <% if (uri == '/models') { %>class="current" <% } %>href="/models">models</a></li>
+              <li><a <% if (uri == '/animations') { %>class="current" <% } %>href="/anims">animations</a></li>
             </ul>
-          </div>
-          <div id="subscribe-nav">
-            <a href="/subscribe">Subscribe</a>
           </div>
         </div>
       </div>

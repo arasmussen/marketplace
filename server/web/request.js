@@ -129,6 +129,10 @@ define([
         this.respond(200, headers, contents, encoding);
       },
 
+      addTemplates: function(contents) {
+        return this.getHeader() + contents + this.getFooter();
+      },
+
       serveFile: function() {
         var uri = this.getURI();
         var filepath = this.webroot + uri;
